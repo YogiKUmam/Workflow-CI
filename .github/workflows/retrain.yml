@@ -42,7 +42,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image from MLflow model
-        run: mlflow models build-docker -m MLProject/outputs/model -n ${{ secrets.DOCKERHUB_USERNAME }}/heart-disease-smsml:latest
+        run: mlflow models build-docker -m MLProject/outputs/model -n ${{ secrets.DOCKERHUB_USERNAME }}/heart-disease-smsml:latest --env-manager local
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/heart-disease-smsml:latest
