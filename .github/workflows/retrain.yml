@@ -25,7 +25,7 @@ jobs:
       - name: Run MLflow Project
         env:
           MLFLOW_TRACKING_URI: file:./mlruns_ci
-        run: python MLProject/modelling.py
+        run: mlflow run MLProject --env-manager=local
 
       - name: Upload training outputs
         uses: actions/upload-artifact@v4
