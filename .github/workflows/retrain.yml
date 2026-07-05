@@ -23,7 +23,7 @@ jobs:
           pip install -r MLProject/requirements.txt
 
       - name: Run MLflow Project
-        run: mlflow run MLProject --env-manager=local
+        run: python MLProject/modelling.py
 
       - name: Upload training outputs
         uses: actions/upload-artifact@v4
