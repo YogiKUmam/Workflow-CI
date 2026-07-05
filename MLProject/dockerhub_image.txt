@@ -1,0 +1,2 @@
+Docker Hub image:
+docker.io/YogiKUmam/heart-disease-smsml:latest

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/yogi/Documents/Codex/2026-07-05/new-chat/work/smsml_advanced/Workflow-CI/mlruns/696680599863200026/54de311907b24654b228a188c35bdd0e/artifacts
+end_time: 1783234806336
+entry_point_name: ''
+experiment_id: '696680599863200026'
+lifecycle_stage: active
+run_id: 54de311907b24654b228a188c35bdd0e
+run_name: ci-random-forest
+run_uuid: 54de311907b24654b228a188c35bdd0e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783234796889
+status: 3
+tags: []
+user_id: yogi

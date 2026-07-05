@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/yogi/Documents/Codex/2026-07-05/new-chat/work/smsml_advanced/Workflow-CI/mlruns/0/2d9238b216e3443ba0054014fa2e1cca/artifacts
+end_time: 1783234753540
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2d9238b216e3443ba0054014fa2e1cca
+run_name: upset-bass-153
+run_uuid: 2d9238b216e3443ba0054014fa2e1cca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783234753397
+status: 4
+tags: []
+user_id: yogi
