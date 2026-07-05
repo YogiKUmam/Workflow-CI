@@ -24,7 +24,7 @@ jobs:
 
       - name: Run MLflow Project
         env:
-          MLFLOW_TRACKING_URI: file:./mlruns_ci
+          MLFLOW_TRACKING_URI: file:${{ github.workspace }}/mlruns_ci
         run: mlflow run MLProject --env-manager=local
 
       - name: Upload training outputs

@@ -35,7 +35,11 @@ def main() -> None:
     predictions = model.predict(x_test)
     signature = infer_signature(x_test, predictions)
 
-    mlflow.set_experiment("heart-disease-ci")
+    if os.getenv("MLFLOW_RUN_ID") is None:
+        # Saat dijalankan via `mlflow run`, run sudah dibuat oleh MLflow Projects,
+        # jadi set_experiment hanya diperlukan pada eksekusi langsung.
+        mlflow.set_experiment("heart-disease-ci")
+
     with mlflow.start_run(run_name="ci-random-forest"):
         mlflow.log_metric("accuracy", accuracy_score(y_test, predictions))
         mlflow.log_metric("precision", precision_score(y_test, predictions))
