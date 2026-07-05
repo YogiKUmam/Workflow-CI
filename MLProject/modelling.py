@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import shutil
 from pathlib import Path
 
 os.environ.setdefault(
@@ -47,6 +48,8 @@ def main() -> None:
             input_example=x_test.head(5),
         )
 
+    if OUTPUT_MODEL.exists():
+        shutil.rmtree(OUTPUT_MODEL)
     OUTPUT_MODEL.parent.mkdir(parents=True, exist_ok=True)
     mlflow.sklearn.save_model(
         model,
