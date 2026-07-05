@@ -23,6 +23,8 @@ jobs:
           pip install -r MLProject/requirements.txt
 
       - name: Run MLflow Project
+        env:
+          MLFLOW_TRACKING_URI: file:./mlruns_ci
         run: python MLProject/modelling.py
 
       - name: Upload training outputs
@@ -31,7 +33,7 @@ jobs:
           name: heart-disease-training-outputs
           path: |
             MLProject/outputs/model
-            mlruns
+            mlruns_ci
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
